@@ -248,16 +248,17 @@
       .gallery { padding-top: 0; }
       .gallery-top { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 25px; }
       .gallery-top h2 { font-size: clamp(1.85rem, 3.6vw, 2.9rem); }
-      .gallery-grid { display: grid; grid-template-columns: 1.3fr .9fr .9fr; grid-template-rows: 190px 190px; gap: 13px; }
-      .gallery-card { overflow: hidden; border-radius: 18px; background: var(--wash); }
-      .gallery-card:first-child { grid-row: span 2; }
-      .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
-      .gallery-card:hover img { transform: scale(1.05); }
-      .gallery-card:nth-child(1) img { object-position: 48% center; }
-      .gallery-card:nth-child(2) img { object-position: 35% center; }
-      .gallery-card:nth-child(3) img { object-position: 70% center; }
+      .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+      .gallery-card { display: grid; aspect-ratio: 1 / 1; place-items: center; overflow: hidden; border: 1px solid #dfe7da; border-radius: 18px; background: linear-gradient(145deg, #f8faf5, #e7eee1); box-shadow: 0 12px 24px rgba(4,59,34,.07); }
+      .gallery-card:first-child { grid-row: auto; }
+      .gallery-card img { width: 100%; height: 100%; object-fit: contain; transition: transform .4s ease; }
+      .gallery-card:hover img { transform: scale(1.025); }
+      .gallery-card:nth-child(n) img { object-position: center; }
+      .gallery-card:nth-child(n) img { object-position: center; }
+      .gallery-card:nth-child(n) img { object-position: center; }
+      .gallery-card:nth-child(n) img { object-position: center; }
       .gallery-card:nth-child(4) img { object-position: center; }
-      .gallery-card:nth-child(5) img { object-position: 75% center; }
+      .gallery-card:nth-child(n) img { object-position: center; }
 
       .faq { background: var(--cream); }
       .faq-grid { display: grid; grid-template-columns: minmax(250px, .72fr) minmax(0, 1.28fr); gap: clamp(36px, 7vw, 90px); align-items: start; }
@@ -380,8 +381,8 @@
         .industry { flex: 0 0 130px; min-height: 125px; scroll-snap-align: start; }
         .about-grid { grid-template-columns: 1fr; }
         .about-visual { min-height: 320px; }
-        .gallery-grid { grid-template-columns: 1.25fr 1fr; grid-template-rows: 150px 150px; gap: 9px; }
-        .gallery-card:first-child { grid-row: span 2; }
+        .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+        .gallery-card:first-child { grid-row: auto; }
         .gallery-card:nth-child(5) { display: none; }
         .faq { padding: 68px 0; }
         .faq-item summary { padding: 18px 48px 18px 17px; font-size: .92rem; }
@@ -465,11 +466,11 @@
           </div>
           <div class="product-grid">
             <article class="product-card">
-              <div class="product-image"><img src="assets/d-cut-nonwoven-bag.png" alt="Forest-green nonwoven D-cut bag with an integrated die-cut hand grip" /><span class="bag-logo-print">YOUR<br />LOGO</span><span class="shape-badge">D</span></div>
+              <div class="product-image"><img src="assets/d-cut-bag-photo.png" alt="Colourful red, white and blue nonwoven D-cut bags with integrated hand grips and custom logo printing" /><span class="shape-badge">D</span></div>
               <div class="product-info"><h3>D-cut bags</h3><p>An integrated die-cut grip makes this a practical choice for counters, promotions and everyday packaging.</p><a class="product-link" href="#quote">Enquire about D-cut bags</a></div>
             </article>
             <article class="product-card">
-              <div class="product-image"><img src="assets/w-cut-nonwoven-bag-v2.png" alt="Leaf-green nonwoven W-cut bag with a wide double-curve integrated hand grip and gusseted base" /><span class="bag-logo-print">YOUR<br />LOGO</span><span class="shape-badge">W</span></div>
+              <div class="product-image"><img src="assets/w-cut-bag-photo.png" alt="Colourful nonwoven W-cut bags with wide integrated hand grips and custom logo printing" /><span class="shape-badge">W</span></div>
               <div class="product-info"><h3>W-cut bags</h3><p>A wide W-cut grip and gusseted base give this lighter bag an easy hold and extra room for larger purchases.</p><a class="product-link" href="#quote">Enquire about W-cut bags</a></div>
             </article>
             <article class="product-card">
@@ -497,11 +498,11 @@
           </div>
           <div class="catalogue-grid">
             <article class="catalogue-card">
-              <div class="catalogue-card-image"><img src="assets/d-cut-nonwoven-bag.png" loading="lazy" alt="Forest-green nonwoven D-cut bag with an integrated die-cut hand grip" /><span class="catalogue-number">01</span><span class="catalogue-logo-print">YOUR<br />LOGO</span><span class="catalogue-flag">Everyday retail</span></div>
+              <div class="catalogue-card-image"><img src="assets/d-cut-bag-photo.png" loading="lazy" alt="Colourful red, white and blue nonwoven D-cut bags with integrated hand grips and custom logo printing" /><span class="catalogue-number">01</span><span class="catalogue-flag">Everyday retail</span></div>
               <div class="catalogue-card-content"><p class="catalogue-type">D-cut format</p><h3>D-cut bags</h3><p class="catalogue-summary">A clean, practical carry bag with a built-in die-cut grip—well suited to retail counters, samples and promotional packs.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Retail counters &amp; promotions</dd></div><div><dt>Handle</dt><dd>Integrated D-cut grip</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="D-cut bag">Request D-cut specifications</a></div>
             </article>
             <article class="catalogue-card">
-              <div class="catalogue-card-image"><img src="assets/w-cut-nonwoven-bag-v2.png" loading="lazy" alt="Leaf-green nonwoven W-cut bag with a wide double-curve integrated hand grip and gusseted base" /><span class="catalogue-number">02</span><span class="catalogue-logo-print">YOUR<br />LOGO</span><span class="catalogue-flag">Everyday capacity</span></div>
+              <div class="catalogue-card-image"><img src="assets/w-cut-bag-photo.png" loading="lazy" alt="Colourful nonwoven W-cut bags with wide integrated hand grips and custom logo printing" /><span class="catalogue-number">02</span><span class="catalogue-flag">Everyday capacity</span></div>
               <div class="catalogue-card-content"><p class="catalogue-type">W-cut format</p><h3>W-cut bags</h3><p class="catalogue-summary">A lightweight, gusseted format with a wide W-cut grip—useful when you want an easy carry and a little more room.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Grocery, garments &amp; daily retail</dd></div><div><dt>Handle</dt><dd>Wide integrated W-cut</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="W-cut bag">Request W-cut specifications</a></div>
             </article>
             <article class="catalogue-card">
@@ -589,11 +590,11 @@
         <div class="shell">
           <div class="gallery-top"><div><p class="kicker">Our work</p><h2 id="gallery-title">A closer look at bag and print details.</h2></div><a class="button button-inset" href="#quote">Discuss your requirements</a></div>
           <div class="gallery-grid">
-            <div class="gallery-card"><img src="assets/eco-fab-bag-collection.png" alt="Colourful nonwoven bag collection on a wooden display table" /></div>
-            <div class="gallery-card"><img src="assets/printing-production.png" alt="Custom bag printing machinery at work" /></div>
-            <div class="gallery-card"><img src="assets/eco-fab-bag-collection.png" alt="Yellow and white nonwoven bags with loop handles" /></div>
-            <div class="gallery-card"><img src="assets/printing-production.png" alt="Nonwoven bag material in a printing workspace" /></div>
-            <div class="gallery-card"><img src="assets/eco-fab-bag-collection.png" alt="Blue nonwoven tote for retail packaging" /></div>
+            <div class="gallery-card"><img src="assets/d-cut-bag-photo.png" alt="Colourful custom-printed nonwoven D-cut bags with integrated hand grips" /></div>
+            <div class="gallery-card"><img src="assets/w-cut-bag-photo.png" alt="Colourful custom-printed nonwoven W-cut bags with integrated handles" /></div>
+            <div class="gallery-card"><img src="assets/loop-handle-bag-photo.png" alt="Custom-printed nonwoven loop-handle bag with red sewn handles" /></div>
+            <div class="gallery-card"><img src="assets/box-bag-photo.png" alt="Custom-printed nonwoven box bag with a structured gusseted base" /></div>
+            
           </div>
         </div>
       </section>

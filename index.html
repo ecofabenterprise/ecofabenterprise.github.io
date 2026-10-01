@@ -384,7 +384,7 @@
         .about-visual { min-height: 320px; }
         .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
         .gallery-card:first-child { grid-row: auto; }
-        .gallery-card:nth-child(5) { display: none; }
+        /* Show all gallery cards on mobile. */
         .faq { padding: 68px 0; }
         .faq-item summary { padding: 18px 48px 18px 17px; font-size: .92rem; }
         .faq-item summary::after { right: 16px; }
@@ -463,7 +463,7 @@
         <div class="shell">
           <div class="section-top">
             <div><p class="kicker">Our products</p><h2 id="products-title">Nonwoven bags for the way you do business.</h2></div>
-            <p class="section-intro">Explore four practical formats, then share your size, colour, quantity and printing requirements.</p>
+            <p class="section-intro">Explore six practical formats, then share your size, colour, quantity and printing requirements.</p>
           </div>
           <div class="product-grid">
             <article class="product-card">
@@ -481,6 +481,14 @@
             <article class="product-card">
               <div class="product-image"><img src="assets/box-bag-photo.png" alt="Yellow autumn leaf-printed nonwoven box bag with red sewn loop handles and side gussets" /><span class="shape-badge">B</span></div>
               <div class="product-info"><h3>Box bags</h3><p>A firm squared base and tall side gussets keep larger packs upright, stable and presentable.</p><a class="product-link" href="#quote">Enquire about box bags</a></div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="assets/bottom-gusset-bag-photo.png" alt="Blue nonwoven bottom gusset bag with black sewn handles and gold custom logo printing" /><span class="shape-badge">G</span></div>
+              <div class="product-info"><h3>Bottom gusset bags</h3><p>A reinforced flat base adds depth and stability for groceries, garments and heavier retail packs.</p><a class="product-link" href="#quote">Enquire about bottom gusset bags</a></div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="assets/shoe-bag-photo.png" alt="Cream drawstring nonwoven shoe bag with navy and gold custom logo print beside formal shoes" /><span class="shape-badge">S</span></div>
+              <div class="product-info"><h3>Shoe bags</h3><p>A compact drawstring format for footwear, accessories, travel kits and branded presentation packs.</p><a class="product-link" href="#quote">Enquire about shoe bags</a></div>
             </article>
           </div>
         </div>
@@ -513,6 +521,14 @@
             <article class="catalogue-card">
               <div class="catalogue-card-image"><img src="assets/box-bag-photo.png" loading="lazy" alt="Yellow autumn leaf-printed nonwoven box bag with red sewn loop handles and side gussets" /><span class="catalogue-number">04</span><span class="catalogue-flag">Structured packs</span></div>
               <div class="catalogue-card-content"><p class="catalogue-type">Box format</p><h3>Box bags</h3><p class="catalogue-summary">A taller, gusseted format with a squared base for goods that need a stable, presentable carry bag.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Larger or premium product packs</dd></div><div><dt>Construction</dt><dd>Squared base &amp; side gussets</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="Box bag">Request box-bag specifications</a></div>
+            </article>
+            <article class="catalogue-card">
+              <div class="catalogue-card-image"><img src="assets/bottom-gusset-bag-photo.png" loading="lazy" alt="Blue nonwoven bottom gusset bag with black sewn handles and gold custom logo printing" /><span class="catalogue-number">05</span><span class="catalogue-flag">Stable carry</span></div>
+              <div class="catalogue-card-content"><p class="catalogue-type">Bottom gusset format</p><h3>Bottom gusset bags</h3><p class="catalogue-summary">A sturdy carry bag with a flat bottom gusset for packs that need extra room, depth and stability.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Groceries &amp; heavier retail packs</dd></div><div><dt>Construction</dt><dd>Flat bottom gusset</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="Bottom gusset bag">Request bottom gusset specifications</a></div>
+            </article>
+            <article class="catalogue-card">
+              <div class="catalogue-card-image"><img src="assets/shoe-bag-photo.png" loading="lazy" alt="Cream drawstring nonwoven shoe bag with navy and gold custom logo print beside formal shoes" /><span class="catalogue-number">06</span><span class="catalogue-flag">Protective packing</span></div>
+              <div class="catalogue-card-content"><p class="catalogue-type">Shoe-bag format</p><h3>Shoe bags</h3><p class="catalogue-summary">A compact drawstring format for footwear, accessories, travel kits and branded presentation packs.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Footwear, accessories &amp; travel packs</dd></div><div><dt>Closure</dt><dd>Drawstring or custom finish</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="Shoe bag">Request shoe-bag specifications</a></div>
             </article>
           </div>
           <div class="catalogue-cta"><div><strong>Need a size or style not shown here?</strong><p>Tell us what you want to carry and how you want it branded. We’ll discuss the right bag specification with you.</p></div><a class="button button-quote" href="#quote">Discuss your requirements</a></div>
@@ -573,10 +589,11 @@
           <div class="about-copy">
             <p class="kicker">About us</p>
             <h2 id="about-title">ECO-FAB ENTERPRISE</h2>
-            <p>ECO-FAB ENTERPRISE is a nonwoven bag manufacturer in Gangarampur, Dakshin Dinajpur, West Bengal, offering D-cut, W-cut, loop-handle and box bags with multicolour customized printing. We help businesses choose practical carry bags and bring their branding to the finished product.</p>
+            <p>ECO-FAB ENTERPRISE is a nonwoven bag manufacturer in Gangarampur, Dakshin Dinajpur, West Bengal, offering D-cut, W-cut, loop-handle, box, bottom gusset and shoe bags with multicolour customized printing. We help businesses choose practical carry bags and bring their branding to the finished product.</p>
             <div class="about-details">
               <div class="about-detail"><b>Location</b><span>Gangarampur, Dakshin Dinajpur, West Bengal</span></div>
               <div class="about-detail"><b>Proprietor</b><span>Bishal Chakraborty</span></div>
+              <div class="about-detail"><b>GSTIN</b><span>19BOIPC5815G1ZZ</span></div>
               <div class="about-detail"><b>Enquiries</b><span>Share your bag style, size, colour, quantity and printing needs.</span></div>
             </div>
           </div>
@@ -595,6 +612,8 @@
             <div class="gallery-card"><img src="assets/w-cut-bag-photo.png" alt="Colourful custom-printed nonwoven W-cut bags with integrated handles" /></div>
             <div class="gallery-card"><img src="assets/loop-handle-bag-photo.png" alt="Custom-printed nonwoven loop-handle bag with red sewn handles" /></div>
             <div class="gallery-card"><img src="assets/box-bag-photo.png" alt="Custom-printed nonwoven box bag with a structured gusseted base" /></div>
+            <div class="gallery-card"><img src="assets/bottom-gusset-bag-photo.png" alt="Blue custom-printed nonwoven bottom gusset bag with a stable flat base" /></div>
+            <div class="gallery-card"><img src="assets/shoe-bag-photo.png" alt="Cream custom-printed nonwoven drawstring shoe bag for footwear packaging" /></div>
             
           </div>
         </div>
@@ -609,7 +628,7 @@
             <span class="faq-location">Based in Gangarampur, West Bengal</span>
           </div>
           <div class="faq-list">
-            <details class="faq-item"><summary>Which bag types can I enquire about?</summary><p class="faq-answer">You can enquire about D-cut, W-cut, loop-handle and box bags. If you are unsure which format fits your products, share the intended use and ask for guidance.</p></details>
+            <details class="faq-item"><summary>Which bag types can I enquire about?</summary><p class="faq-answer">You can enquire about D-cut, W-cut, loop-handle, box, bottom gusset and shoe bags. If you are unsure which format fits your products, share the intended use and ask for guidance.</p></details>
             <details class="faq-item"><summary>Can I request a custom size, GSM or colour?</summary><p class="faq-answer">Yes. Tell us your preferred size, GSM and colour, or choose “Need guidance” in the quote form. The suitable specification can then be discussed for your requirement.</p></details>
             <details class="faq-item"><summary>Can I add my logo or multicolour printing?</summary><p class="faq-answer">Yes. Share your logo, artwork or brand colours through WhatsApp and discuss logo placement or multicolour customized printing for your bag.</p></details>
             <details class="faq-item"><summary>What are the minimum order quantity and typical delivery time?</summary><p class="faq-answer">These depend on the bag format, size, GSM, printing requirement and delivery location. Share your details so the suitable order quantity and timing can be confirmed with your quote.</p></details>
@@ -627,6 +646,7 @@
             <div class="quote-direct">
               <a href="tel:+917980484921">Call / WhatsApp: +91 79804 84921</a>
               <a href="mailto:enterpriseecofab@gmail.com">Email: enterpriseecofab@gmail.com</a>
+              <span>GSTIN: 19BOIPC5815G1ZZ</span>
             </div>
           </div>
           <form class="quote-form" id="quote-form">

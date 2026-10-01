@@ -3,10 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ECO-FAB ENTERPRISE manufactures nonwoven bags and offers custom printing in Gangarampur, Dakshin Dinajpur, West Bengal." />
+    <meta name="description" content="ECO-FAB ENTERPRISE is a nonwoven bag manufacturer in Gangarampur, Dakshin Dinajpur, West Bengal, offering D-cut, W-cut, loop-handle and box bags with multicolour customized printing." />
+    <meta name="robots" content="index,follow" />
+    <meta name="geo.region" content="IN-WB" />
+    <meta name="geo.placename" content="Gangarampur, Dakshin Dinajpur, West Bengal" />
     <meta name="theme-color" content="#075431" />
-    <title>ECO-FAB ENTERPRISE | Nonwoven Bags & Custom Printing</title>
+    <link rel="canonical" href="https://ecofabenterprise.github.io/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <title>ECO-FAB ENTERPRISE | Nonwoven Bag Manufacturer, Gangarampur</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23075431'/%3E%3Cpath d='M19 25h26v25H19z' fill='none' stroke='%23fff' stroke-width='5'/%3E%3Cpath d='M25 25c0-11 14-11 14 0' fill='none' stroke='%23f6c443' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "Organization"],
+        "name": "ECO-FAB ENTERPRISE",
+        "url": "https://ecofabenterprise.github.io/",
+        "telephone": "+917980484921",
+        "email": "enterpriseecofab@gmail.com",
+        "description": "Nonwoven bag manufacturer in Gangarampur, Dakshin Dinajpur, West Bengal, offering D-cut, W-cut, loop-handle and box bags with multicolour customized printing.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gangarampur",
+          "addressRegion": "West Bengal",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": ["Nonwoven bags", "D-cut bags", "W-cut bags", "Loop-handle bags", "Box bags", "Multicolour customized printing"]
+      }
+    </script>
     <style>
       :root {
         --green: #075431;
@@ -149,6 +172,43 @@
       .product-info p { min-height: 47px; margin: 0; color: var(--muted); font-size: .91rem; }
       .product-link { display: inline-flex; margin-top: 14px; color: var(--green); font-size: .8rem; font-weight: 900; text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: 5px; }
 
+      .catalogue { position: relative; overflow: hidden; background: linear-gradient(180deg, #f4f8ee 0%, #ffffff 100%); }
+      .catalogue::before { content: ""; position: absolute; top: -145px; right: -130px; width: 390px; height: 390px; border: 72px solid rgba(246,196,67,.16); border-radius: 50%; pointer-events: none; }
+      .catalogue .shell { position: relative; }
+      .catalogue-heading { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(270px, .68fr); align-items: end; gap: 42px; margin-bottom: 27px; }
+      .catalogue-heading > p { max-width: 390px; margin: 0; padding-bottom: 4px; color: var(--muted); font-size: 1rem; }
+      .catalogue-guide { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 33px; }
+      .catalogue-guide-item { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; min-height: 100px; padding: 18px; border: 1px solid #d9e5d8; border-radius: 15px; background: rgba(255,255,255,.76); box-shadow: 0 8px 22px rgba(4,59,34,.045); }
+      .catalogue-guide-number { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; background: var(--green); color: white; font-size: .7rem; font-weight: 950; }
+      .catalogue-guide-item:nth-child(2) .catalogue-guide-number { background: var(--yellow); color: var(--green-deep); }
+      .catalogue-guide-item strong { display: block; color: var(--green-deep); font-size: .91rem; line-height: 1.15; }
+      .catalogue-guide-item p { margin: 5px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.38; }
+      .catalogue-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+      .catalogue-card { display: grid; grid-template-columns: minmax(200px, .78fr) minmax(0, 1.22fr); overflow: hidden; min-height: 352px; border: 1px solid #dce7dc; border-radius: 22px; background: white; box-shadow: 0 14px 32px rgba(4,59,34,.07); transition: transform .22s ease, box-shadow .22s ease; }
+      .catalogue-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+      .catalogue-card-image { position: relative; min-height: 100%; overflow: hidden; background: linear-gradient(145deg, #edf5ec, #fbfcf7); }
+      .catalogue-card:nth-child(2) .catalogue-card-image { background: linear-gradient(145deg, #f8f3df, #fffdf6); }
+      .catalogue-card:nth-child(3) .catalogue-card-image { background: linear-gradient(145deg, #eef5f1, #f9fbfa); }
+      .catalogue-card:nth-child(4) .catalogue-card-image { background: linear-gradient(145deg, #f1f6ed, #fffdf5); }
+      .catalogue-card-image::after { content: ""; position: absolute; inset: auto -35px -52px auto; width: 146px; height: 146px; border-radius: 50%; background: rgba(246,196,67,.22); pointer-events: none; }
+      .catalogue-card-image img { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 352px; padding: 20px 14px; object-fit: contain; }
+      .catalogue-number { position: absolute; z-index: 2; top: 14px; left: 14px; display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgba(4,59,34,.12); border-radius: 10px; background: rgba(255,255,255,.92); color: var(--green-deep); box-shadow: 0 6px 16px rgba(4,59,34,.09); font-size: .72rem; font-weight: 950; }
+      .catalogue-flag { position: absolute; z-index: 2; right: 13px; bottom: 14px; padding: 7px 9px; border-radius: 999px; background: var(--green-deep); color: white; font-size: .62rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+      .catalogue-logo-print { position: absolute; z-index: 2; top: 56%; left: 50%; display: grid; place-items: center; min-width: 70px; min-height: 43px; padding: 6px 8px; border: 1px solid rgba(4,59,34,.18); border-radius: 999px; background: rgba(255,255,255,.9); color: var(--green-deep); box-shadow: 0 7px 16px rgba(4,59,34,.15); font-size: .46rem; font-weight: 950; letter-spacing: .08em; line-height: 1.08; text-align: center; transform: translate(-50%, -50%); pointer-events: none; }
+      .catalogue-card-content { display: flex; flex-direction: column; padding: 30px 29px 27px; }
+      .catalogue-type { margin: 0 0 7px; color: var(--green-soft); font-size: .69rem; font-weight: 950; letter-spacing: .13em; text-transform: uppercase; }
+      .catalogue-card h3 { margin: 0; color: var(--green-deep); font-size: 1.55rem; line-height: 1; letter-spacing: -.045em; }
+      .catalogue-summary { margin: 11px 0 17px; color: var(--muted); font-size: .88rem; line-height: 1.47; }
+      .catalogue-specs { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; }
+      .catalogue-specs div { display: grid; grid-template-columns: 94px 1fr; gap: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+      .catalogue-specs dt { color: #496b58; font-size: .68rem; font-weight: 950; letter-spacing: .05em; text-transform: uppercase; }
+      .catalogue-specs dd { margin: 0; color: var(--ink); font-size: .76rem; font-weight: 760; line-height: 1.35; }
+      .catalogue-link { display: inline-flex; align-self: flex-start; margin-top: auto; padding-top: 18px; color: var(--green); font-size: .79rem; font-weight: 950; text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+      .catalogue-cta { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-top: 27px; padding: 22px 25px; border-radius: 17px; background: var(--green-deep); color: white; }
+      .catalogue-cta p { margin: 0; color: rgba(255,255,255,.78); font-size: .9rem; }
+      .catalogue-cta strong { display: block; margin-bottom: 3px; color: white; font-size: 1.03rem; }
+      .catalogue-cta .button { flex: 0 0 auto; }
+
       .value-strip { padding: 30px 0; border-block: 1px solid #d7e5d6; background: var(--cream); }
       .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
       .value { display: flex; align-items: center; gap: 12px; padding: 5px 9px; color: var(--green-deep); font-size: .88rem; font-weight: 880; }
@@ -199,6 +259,20 @@
       .gallery-card:nth-child(4) img { object-position: center; }
       .gallery-card:nth-child(5) img { object-position: 75% center; }
 
+      .faq { background: var(--cream); }
+      .faq-grid { display: grid; grid-template-columns: minmax(250px, .72fr) minmax(0, 1.28fr); gap: clamp(36px, 7vw, 90px); align-items: start; }
+      .faq-copy > p:not(.kicker) { max-width: 390px; margin: 20px 0 0; color: var(--muted); }
+      .faq-location { display: inline-flex; align-items: center; gap: 8px; margin-top: 23px; padding: 10px 12px; border: 1px solid #d8e6d7; border-radius: 10px; background: rgba(255,255,255,.74); color: var(--green-deep); font-size: .81rem; font-weight: 850; }
+      .faq-location::before { content: "●"; color: var(--yellow-deep); font-size: .66rem; }
+      .faq-list { display: grid; gap: 10px; }
+      .faq-item { overflow: hidden; border: 1px solid #d7e4d6; border-radius: 15px; background: white; box-shadow: 0 7px 17px rgba(4,59,34,.035); }
+      .faq-item summary { position: relative; display: block; padding: 21px 54px 21px 21px; color: var(--green-deep); cursor: pointer; font-size: .98rem; font-weight: 900; line-height: 1.25; list-style: none; }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item summary::after { content: "+"; position: absolute; top: 50%; right: 20px; display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; background: var(--wash); color: var(--green); font-size: 1.2rem; font-weight: 750; line-height: 1; transform: translateY(-50%); }
+      .faq-item[open] summary { background: #fbfdf9; }
+      .faq-item[open] summary::after { content: "−"; background: var(--yellow); color: var(--green-deep); }
+      .faq-answer { margin: 0; padding: 0 21px 21px; color: var(--muted); font-size: .91rem; line-height: 1.55; }
+
       .quote-section { padding: 0 0 96px; background: linear-gradient(to bottom, white 0 35%, var(--cream) 35%); }
       .quote-panel { display: grid; grid-template-columns: .78fr 1.22fr; gap: 38px; padding: clamp(30px, 5vw, 59px); border-radius: var(--radius-lg); background: white; box-shadow: var(--shadow); }
       .quote-copy h2 { font-size: clamp(2rem, 3.4vw, 3rem); }
@@ -210,6 +284,7 @@
       .form-field.full { grid-column: 1 / -1; }
       .form-field label { color: #416052; font-size: .75rem; font-weight: 900; letter-spacing: .04em; }
       input, select, textarea { width: 100%; border: 1px solid #d5e1d6; border-radius: 10px; padding: 12px 13px; color: var(--ink); background: #fbfdfb; font-size: .93rem; }
+      .form-field input, .form-field select { min-height: 48px; }
       textarea { min-height: 94px; resize: vertical; }
       input:focus, select:focus, textarea:focus { border-color: var(--green); outline: 2px solid rgba(7,84,49,.12); }
       .quote-form .button { justify-self: start; margin-top: 4px; border: 0; }
@@ -242,11 +317,14 @@
         .hero-content { max-width: 720px; }
         .hero-tagline { right: 28px; }
         .product-grid { grid-template-columns: repeat(2, 1fr); }
+        .catalogue-heading { grid-template-columns: 1fr; gap: 14px; }
+        .catalogue-card { grid-template-columns: minmax(190px, .72fr) minmax(0, 1.28fr); }
         .value-grid { grid-template-columns: repeat(2, 1fr); }
         .printing-grid { grid-template-columns: 1fr; }
         .printing-copy { padding: 77px max(0px, calc((100vw - 1180px) / 2)) 63px; width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
         .printing-visual img { min-height: 410px; }
         .industry-grid { grid-template-columns: repeat(4, 1fr); }
+        .faq-grid { grid-template-columns: 1fr; gap: 30px; }
         .quote-panel { grid-template-columns: 1fr; }
       }
 
@@ -279,6 +357,18 @@
         .product-info h3 { font-size: 1rem; }
         .product-info p { min-height: 68px; font-size: .83rem; }
         .product-link { margin-top: 9px; font-size: .73rem; }
+        .catalogue::before { top: -165px; right: -210px; }
+        .catalogue-guide { grid-template-columns: 1fr; gap: 8px; margin-bottom: 18px; }
+        .catalogue-guide-item { min-height: 0; padding: 15px; }
+        .catalogue-grid { grid-template-columns: 1fr; gap: 14px; }
+        .catalogue-card { grid-template-columns: 1fr; min-height: 0; }
+        .catalogue-card-image { min-height: 255px; }
+        .catalogue-card-image img { min-height: 255px; padding: 16px 15px; }
+        .catalogue-card-content { padding: 24px 20px 22px; }
+        .catalogue-card h3 { font-size: 1.42rem; }
+        .catalogue-summary { margin-bottom: 15px; }
+        .catalogue-cta { display: grid; gap: 16px; margin-top: 18px; padding: 21px; }
+        .catalogue-cta .button { width: 100%; }
         .value-strip { overflow: hidden; padding: 14px 0; }
         .value-grid { display: flex; width: max-content; gap: 7px; }
         .value { width: 195px; padding: 9px 11px; border-radius: 13px; background: white; font-size: .81rem; }
@@ -293,6 +383,10 @@
         .gallery-grid { grid-template-columns: 1.25fr 1fr; grid-template-rows: 150px 150px; gap: 9px; }
         .gallery-card:first-child { grid-row: span 2; }
         .gallery-card:nth-child(5) { display: none; }
+        .faq { padding: 68px 0; }
+        .faq-item summary { padding: 18px 48px 18px 17px; font-size: .92rem; }
+        .faq-item summary::after { right: 16px; }
+        .faq-answer { padding: 0 17px 18px; font-size: .88rem; }
         .quote-section { padding-bottom: 72px; background: linear-gradient(to bottom, white 0 24%, var(--cream) 24%); }
         .quote-panel { gap: 29px; padding: 26px 20px; }
         .quote-form { grid-template-columns: 1fr; }
@@ -319,7 +413,8 @@
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
           <a href="#products">Products</a>
-          <a href="#printing">Custom printing</a>
+          <a href="#catalogue">Catalogue</a>
+          <a href="#printing">Multicolour printing</a>
           <a href="#industries">Industries</a>
           <a href="#about">About us</a>
           <a href="#quote">Get a quote</a>
@@ -332,7 +427,8 @@
       </div>
       <nav id="mobile-navigation" class="mobile-nav" aria-label="Mobile navigation" hidden>
         <a href="#products">Products</a>
-        <a href="#printing">Custom printing</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#printing">Multicolour printing</a>
         <a href="#industries">Industries</a>
         <a href="#about">About us</a>
         <a href="#quote">Get a quote</a>
@@ -346,14 +442,14 @@
           <div class="hero-content">
             <p class="eyebrow">Manufacturer of</p>
             <h1 id="hero-title">Nonwoven bags <br />for <em>your brand.</em></h1>
-            <p class="hero-copy">Choose practical bag formats and custom printing for retail, promotional and everyday packaging needs.</p>
+            <p class="hero-copy">Choose practical bag formats and multicolour customized printing for retail, promotional and everyday packaging needs.</p>
             <div class="hero-actions">
               <a class="button button-quote" href="#quote">Get a quote</a>
               <a class="button button-outline" href="https://wa.me/917980484921?text=Hello%20ECO-FAB%20ENTERPRISE%2C%20I%20would%20like%20to%20enquire%20about%20nonwoven%20bags." target="_blank" rel="noopener">WhatsApp us</a>
             </div>
             <div class="hero-trust" aria-label="Key offerings">
               <span>Four useful bag formats</span>
-              <span>Custom printing options</span>
+              <span>Multicolour printing</span>
               <span>For retail and promotions</span>
             </div>
           </div>
@@ -388,10 +484,43 @@
         </div>
       </section>
 
+      <section class="section catalogue" id="catalogue" aria-labelledby="catalogue-title">
+        <div class="shell">
+          <div class="catalogue-heading">
+            <div><p class="kicker">Product catalogue</p><h2 id="catalogue-title">Choose a format. Add your brand.</h2></div>
+            <p>Start with the bag style that suits your products. Your final size, GSM, colour and printing specification can be tailored to your requirement.</p>
+          </div>
+          <div class="catalogue-guide" aria-label="How to use the product catalogue">
+            <div class="catalogue-guide-item"><span class="catalogue-guide-number">01</span><div><strong>Made for your order</strong><p>Choose the size, GSM and colour options that fit your business.</p></div></div>
+            <div class="catalogue-guide-item"><span class="catalogue-guide-number">02</span><div><strong>Brand-ready printing</strong><p>Choose a plain bag, logo printing or multicolour customized printing.</p></div></div>
+            <div class="catalogue-guide-item"><span class="catalogue-guide-number">03</span><div><strong>Easy to enquire</strong><p>Share your bag type, quantity and intended use to discuss specifications.</p></div></div>
+          </div>
+          <div class="catalogue-grid">
+            <article class="catalogue-card">
+              <div class="catalogue-card-image"><img src="assets/d-cut-nonwoven-bag.png" loading="lazy" alt="Forest-green nonwoven D-cut bag with an integrated die-cut hand grip" /><span class="catalogue-number">01</span><span class="catalogue-logo-print">YOUR<br />LOGO</span><span class="catalogue-flag">Everyday retail</span></div>
+              <div class="catalogue-card-content"><p class="catalogue-type">D-cut format</p><h3>D-cut bags</h3><p class="catalogue-summary">A clean, practical carry bag with a built-in die-cut grip—well suited to retail counters, samples and promotional packs.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Retail counters &amp; promotions</dd></div><div><dt>Handle</dt><dd>Integrated D-cut grip</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="D-cut bag">Request D-cut specifications</a></div>
+            </article>
+            <article class="catalogue-card">
+              <div class="catalogue-card-image"><img src="assets/w-cut-nonwoven-bag-v2.png" loading="lazy" alt="Leaf-green nonwoven W-cut bag with a wide double-curve integrated hand grip and gusseted base" /><span class="catalogue-number">02</span><span class="catalogue-logo-print">YOUR<br />LOGO</span><span class="catalogue-flag">Everyday capacity</span></div>
+              <div class="catalogue-card-content"><p class="catalogue-type">W-cut format</p><h3>W-cut bags</h3><p class="catalogue-summary">A lightweight, gusseted format with a wide W-cut grip—useful when you want an easy carry and a little more room.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Grocery, garments &amp; daily retail</dd></div><div><dt>Handle</dt><dd>Wide integrated W-cut</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="W-cut bag">Request W-cut specifications</a></div>
+            </article>
+            <article class="catalogue-card">
+              <div class="catalogue-card-image"><img src="assets/loop-handle-nonwoven-bag.png" loading="lazy" alt="White nonwoven tote with sewn navy loop handles and reinforced tabs" /><span class="catalogue-number">03</span><span class="catalogue-logo-print">YOUR<br />LOGO</span><span class="catalogue-flag">Premium retail</span></div>
+              <div class="catalogue-card-content"><p class="catalogue-type">Loop-handle format</p><h3>Loop-handle bags</h3><p class="catalogue-summary">A polished tote-style bag with sewn loop handles. Choose it when presentation matters as much as carrying comfort.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Boutiques, gifting &amp; events</dd></div><div><dt>Handle</dt><dd>Sewn loop handles</dd></div><div><dt>Customise</dt><dd>Plain, logo or multicolour print</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="Loop-handle bag">Request loop-handle specifications</a></div>
+            </article>
+            <article class="catalogue-card">
+              <div class="catalogue-card-image"><img src="assets/box-nonwoven-bag.png" loading="lazy" alt="Structured deep-green and white nonwoven box bag with squared base and reinforced handles" /><span class="catalogue-number">04</span><span class="catalogue-logo-print">YOUR<br />LOGO</span><span class="catalogue-flag">Structured packs</span></div>
+              <div class="catalogue-card-content"><p class="catalogue-type">Box format</p><h3>Box bags</h3><p class="catalogue-summary">A taller, gusseted format with a squared base for goods that need a stable, presentable carry bag.</p><dl class="catalogue-specs"><div><dt>Ideal for</dt><dd>Larger or premium product packs</dd></div><div><dt>Construction</dt><dd>Squared base &amp; side gussets</dd></div><div><dt>Customise</dt><dd>Size, GSM, colour &amp; printing</dd></div></dl><a class="catalogue-link" href="#quote" data-bag-type="Box bag">Request box-bag specifications</a></div>
+            </article>
+          </div>
+          <div class="catalogue-cta"><div><strong>Need a size or style not shown here?</strong><p>Tell us what you want to carry and how you want it branded. We’ll discuss the right bag specification with you.</p></div><a class="button button-quote" href="#quote">Discuss your requirements</a></div>
+        </div>
+      </section>
+
       <section class="value-strip" aria-label="Why ECO-FAB">
         <div class="shell value-grid">
           <div class="value"><span class="value-icon">01</span>Practical bag formats</div>
-          <div class="value"><span class="value-icon">02</span>Custom print coordination</div>
+          <div class="value"><span class="value-icon">02</span>Multicolour print coordination</div>
           <div class="value"><span class="value-icon">03</span>For retail and promotions</div>
           <div class="value"><span class="value-icon">04</span>Based in Gangarampur</div>
         </div>
@@ -400,7 +529,7 @@
       <section class="printing" id="printing" aria-labelledby="printing-title">
         <div class="printing-grid">
           <div class="printing-copy">
-            <p class="kicker">Custom printing</p>
+            <p class="kicker">Multicolour customized printing</p>
             <h2 id="printing-title">Your bag. <em>Your brand.</em></h2>
             <p>Bring your artwork and requirements. We’ll help you settle the right bag format and printed-bag specification for your business, from simple logo placement to multicolour customized printing.</p>
             <ul class="check-list">
@@ -441,7 +570,7 @@
           <div class="about-copy">
             <p class="kicker">About us</p>
             <h2 id="about-title">ECO-FAB ENTERPRISE</h2>
-            <p>ECO-FAB ENTERPRISE is a nonwoven-bag manufacturing and custom-printing business in Gangarampur, Dakshin Dinajpur, West Bengal. We help businesses choose practical carry bags and bring their branding to the finished product.</p>
+            <p>ECO-FAB ENTERPRISE is a nonwoven bag manufacturer in Gangarampur, Dakshin Dinajpur, West Bengal, offering D-cut, W-cut, loop-handle and box bags with multicolour customized printing. We help businesses choose practical carry bags and bring their branding to the finished product.</p>
             <div class="about-details">
               <div class="about-detail"><b>Location</b><span>Gangarampur, Dakshin Dinajpur, West Bengal</span></div>
               <div class="about-detail"><b>Proprietor</b><span>Bishal Chakraborty</span></div>
@@ -468,12 +597,30 @@
         </div>
       </section>
 
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="shell faq-grid">
+          <div class="faq-copy">
+            <p class="kicker">Helpful answers</p>
+            <h2 id="faq-title">Clear details before you enquire.</h2>
+            <p>Every requirement is different. These answers explain what to share so your bag enquiry can be discussed clearly.</p>
+            <span class="faq-location">Based in Gangarampur, West Bengal</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item"><summary>Which bag types can I enquire about?</summary><p class="faq-answer">You can enquire about D-cut, W-cut, loop-handle and box bags. If you are unsure which format fits your products, share the intended use and ask for guidance.</p></details>
+            <details class="faq-item"><summary>Can I request a custom size, GSM or colour?</summary><p class="faq-answer">Yes. Tell us your preferred size, GSM and colour, or choose “Need guidance” in the quote form. The suitable specification can then be discussed for your requirement.</p></details>
+            <details class="faq-item"><summary>Can I add my logo or multicolour printing?</summary><p class="faq-answer">Yes. Share your logo, artwork or brand colours through WhatsApp and discuss logo placement or multicolour customized printing for your bag.</p></details>
+            <details class="faq-item"><summary>What are the minimum order quantity and typical delivery time?</summary><p class="faq-answer">These depend on the bag format, size, GSM, printing requirement and delivery location. Share your details so the suitable order quantity and timing can be confirmed with your quote.</p></details>
+            <details class="faq-item"><summary>Which delivery locations can I enquire about?</summary><p class="faq-answer">ECO-FAB ENTERPRISE is based in Gangarampur, Dakshin Dinajpur, West Bengal. Include your town, district or PIN code in the quote form so delivery requirements can be discussed.</p></details>
+          </div>
+        </div>
+      </section>
+
       <section class="quote-section" id="quote" aria-labelledby="quote-title">
         <div class="shell quote-panel">
           <div class="quote-copy">
             <p class="kicker">Get a quote</p>
             <h2 id="quote-title">Tell us what you need.</h2>
-            <p>Share a few details and the form will prepare a WhatsApp enquiry for ECO-FAB ENTERPRISE. Nothing is sent until you choose to send it in WhatsApp.</p>
+            <p>Share your bag type, size, GSM, quantity, colour and delivery location. The form prepares a complete WhatsApp enquiry for ECO-FAB ENTERPRISE.</p>
             <div class="quote-direct">
               <a href="tel:+917980484921">Call / WhatsApp: +91 79804 84921</a>
               <a href="mailto:enterpriseecofab@gmail.com">Email: enterpriseecofab@gmail.com</a>
@@ -483,10 +630,15 @@
             <div class="form-field"><label for="name">Your name or business</label><input id="name" name="name" autocomplete="name" required placeholder="Your name or business" /></div>
             <div class="form-field"><label for="bag-type">Bag type</label><select id="bag-type" name="bagType" required><option value="">Choose a bag type</option><option>D-cut bag</option><option>W-cut bag</option><option>Loop-handle bag</option><option>Box bag</option><option>Not sure yet</option></select></div>
             <div class="form-field"><label for="quantity">Approximate quantity</label><input id="quantity" name="quantity" required placeholder="For example: 500 bags" /></div>
-            <div class="form-field"><label for="printing">Printing requirement</label><select id="printing" name="printing" required><option value="">Choose an option</option><option>Custom printing required</option><option>Plain bag required</option><option>Need guidance</option></select></div>
-            <div class="form-field full"><label for="details">Size, colour or other details</label><textarea id="details" name="details" placeholder="Share any useful details about size, colour, artwork or intended use."></textarea></div>
+            <div class="form-field"><label for="bag-size">Preferred bag size</label><input id="bag-size" name="bagSize" required placeholder="e.g. 12 × 14 × 4 in, or Need guidance" /></div>
+            <div class="form-field"><label for="gsm">Preferred GSM</label><input id="gsm" name="gsm" required placeholder="e.g. 75 GSM, or Need guidance" /></div>
+            <div class="form-field"><label for="bag-colour">Preferred bag colour(s)</label><input id="bag-colour" name="bagColour" required placeholder="e.g. Green and white, or Need guidance" /></div>
+            <div class="form-field"><label for="printing">Printing requirement</label><select id="printing" name="printing" required><option value="">Choose an option</option><option>Multicolour customized printing required</option><option>Plain bag required</option><option>Need guidance</option></select></div>
+            <div class="form-field"><label for="artwork-status">Artwork / logo status</label><select id="artwork-status" name="artworkStatus" required><option value="">Choose an option</option><option>Artwork or logo is ready</option><option>Logo is ready; artwork is not final</option><option>Need guidance</option><option>Plain bag — no artwork needed</option><option>Not sure yet</option></select></div>
+            <div class="form-field full"><label for="delivery-location">Delivery location</label><input id="delivery-location" name="deliveryLocation" required placeholder="Town, district or PIN code" /></div>
+            <div class="form-field full"><label for="details">Other requirements</label><textarea id="details" name="details" placeholder="Share special finish, handle preference, intended use or any other useful details."></textarea></div>
             <button class="button button-inset" type="submit">Prepare WhatsApp enquiry</button>
-            <p class="form-note">Your details stay on this device until you choose to open WhatsApp.</p>
+            <p class="form-note">This form prepares your message; it does not upload files. If you have artwork, mention its status and attach it after WhatsApp opens.</p>
           </form>
         </div>
       </section>
@@ -494,8 +646,8 @@
 
     <footer class="site-footer">
       <div class="shell footer-grid">
-        <div><a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy"><strong>ECO-FAB</strong><small>ENTERPRISE</small></span></a><p class="footer-tagline">Nonwoven bags and custom printing for practical business packaging.</p></div>
-        <div><p class="footer-title">Quick links</p><nav class="footer-links" aria-label="Footer navigation"><a href="#products">Products</a><a href="#printing">Custom printing</a><a href="#about">About us</a><a href="#quote">Get a quote</a></nav></div>
+        <div><a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark" aria-hidden="true"></span><span class="brand-copy"><strong>ECO-FAB</strong><small>ENTERPRISE</small></span></a><p class="footer-tagline">Nonwoven bags and multicolour customized printing for practical business packaging.</p></div>
+        <div><p class="footer-title">Quick links</p><nav class="footer-links" aria-label="Footer navigation"><a href="#products">Products</a><a href="#catalogue">Catalogue</a><a href="#printing">Multicolour printing</a><a href="#faq">FAQ</a><a href="#about">About us</a><a href="#quote">Get a quote</a></nav></div>
         <div><p class="footer-title">Contact</p><div class="footer-contact"><a href="tel:+917980484921">+91 79804 84921</a><a href="mailto:enterpriseecofab@gmail.com">enterpriseecofab@gmail.com</a><span>Gangarampur, Dakshin Dinajpur,<br />West Bengal, India</span></div></div>
       </div>
       <div class="shell footer-bottom"><span>© <span id="year"></span> ECO-FAB ENTERPRISE</span><span>Proprietor: Bishal Chakraborty</span></div>
@@ -521,6 +673,9 @@
         menuButton.setAttribute('aria-expanded', 'false');
         menuButton.setAttribute('aria-label', 'Open navigation');
       }));
+      document.querySelectorAll('[data-bag-type]').forEach((link) => link.addEventListener('click', () => {
+        document.querySelector('#bag-type').value = link.dataset.bagType;
+      }));
       quoteForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const data = new FormData(quoteForm);
@@ -530,8 +685,13 @@
           'Name / business: ' + data.get('name'),
           'Bag type: ' + data.get('bagType'),
           'Approximate quantity: ' + data.get('quantity'),
+          'Preferred bag size: ' + data.get('bagSize'),
+          'Preferred GSM: ' + data.get('gsm'),
+          'Preferred bag colour(s): ' + data.get('bagColour'),
           'Printing requirement: ' + data.get('printing'),
-          'Other details: ' + (data.get('details') || 'Not provided')
+          'Artwork / logo status: ' + data.get('artworkStatus'),
+          'Delivery location: ' + data.get('deliveryLocation'),
+          'Other requirements: ' + (data.get('details') || 'Not provided')
         ].join('\n');
         window.open('https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
       });

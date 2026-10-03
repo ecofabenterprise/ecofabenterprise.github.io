@@ -239,10 +239,10 @@
       .studio-preview-top { display: flex; justify-content: space-between; gap: 15px; padding: 19px 22px; border-bottom: 1px solid var(--line); }
       .studio-preview-top strong { color: var(--green-deep); font-size: 1rem; }
       .preview-badge { align-self: center; padding: 6px 9px; border-radius: 999px; background: var(--wash); color: var(--green); font-size: .65rem; font-weight: 950; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
-      .studio-canvas { position: relative; display: grid; flex: 1; place-items: center; min-height: 400px; padding: 42px 24px 32px; perspective: 1100px; background: radial-gradient(circle at 15% 14%, rgba(246,196,67,.25), transparent 23%), linear-gradient(135deg, #e9f0e5, #f9fbf6 55%, #e2eee2); }
+      .studio-canvas { position: relative; display: grid; flex: 1; place-items: start center; min-height: 400px; padding: 20px 24px 32px; perspective: 1100px; background: radial-gradient(circle at 15% 14%, rgba(246,196,67,.25), transparent 23%), linear-gradient(135deg, #e9f0e5, #f9fbf6 55%, #e2eee2); }
       .studio-canvas::before { content: ""; position: absolute; bottom: 39px; width: min(78%, 420px); height: 35px; border-radius: 50%; background: rgba(4,59,34,.16); filter: blur(15px); }
-      .product-reference { position: relative; z-index: 1; display: none; width: min(78vw, 430px); overflow: hidden; border: 8px solid white; border-radius: 20px; box-shadow: 0 23px 34px rgba(4,59,34,.2); background: #ecf2e9; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .35s ease; }
-      .product-reference img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+      .product-reference { position: relative; z-index: 1; display: none; width: min(64vw, 255px); overflow: hidden; border: 6px solid white; border-radius: 18px; box-shadow: 0 18px 28px rgba(4,59,34,.2); background: #ecf2e9; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .35s ease; }
+      .product-reference img { display: block; width: 100%; height: clamp(230px, 31vw, 320px); object-fit: contain; background: #f8faf5; }
       .product-reference::after { content: "Actual ECO-FAB product reference"; position: absolute; right: 12px; bottom: 12px; padding: 7px 9px; border-radius: 999px; background: rgba(4,59,34,.88); color: white; font-size: .61rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
       .studio-canvas.preview-real .product-reference, .studio-canvas.preview-spin .product-reference { display: block; }
       .studio-canvas.preview-real .bag-stage, .studio-canvas.preview-spin .bag-stage { display: none; }

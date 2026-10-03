@@ -241,6 +241,13 @@
       .preview-badge { align-self: center; padding: 6px 9px; border-radius: 999px; background: var(--wash); color: var(--green); font-size: .65rem; font-weight: 950; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
       .studio-canvas { position: relative; display: grid; flex: 1; place-items: center; min-height: 400px; padding: 42px 24px 32px; perspective: 1100px; background: radial-gradient(circle at 15% 14%, rgba(246,196,67,.25), transparent 23%), linear-gradient(135deg, #e9f0e5, #f9fbf6 55%, #e2eee2); }
       .studio-canvas::before { content: ""; position: absolute; bottom: 39px; width: min(78%, 420px); height: 35px; border-radius: 50%; background: rgba(4,59,34,.16); filter: blur(15px); }
+      .product-reference { position: relative; z-index: 1; display: none; width: min(78vw, 430px); overflow: hidden; border: 8px solid white; border-radius: 20px; box-shadow: 0 23px 34px rgba(4,59,34,.2); background: #ecf2e9; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .35s ease; }
+      .product-reference img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+      .product-reference::after { content: "Actual ECO-FAB product reference"; position: absolute; right: 12px; bottom: 12px; padding: 7px 9px; border-radius: 999px; background: rgba(4,59,34,.88); color: white; font-size: .61rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+      .studio-canvas.preview-real .product-reference, .studio-canvas.preview-spin .product-reference { display: block; }
+      .studio-canvas.preview-real .bag-stage, .studio-canvas.preview-spin .bag-stage { display: none; }
+      .studio-canvas.preview-spin .product-reference { transform: rotateY(var(--photo-turn, -7deg)) rotateX(2deg); }
+      .studio-canvas.preview-spin .product-reference::before { content: "Illustrative 360° spin preview"; position: absolute; z-index: 2; top: 12px; left: 12px; padding: 7px 9px; border-radius: 999px; background: rgba(255,255,255,.92); color: var(--green-deep); font-size: .61rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
       .bag-stage { --bag-color: #ffffff; --handle-color: #075431; --turn: -7deg; position: relative; z-index: 1; width: min(74vw, 350px); height: min(86vw, 405px); max-height: 405px; transform: rotateY(var(--turn)) rotateX(2deg); transform-style: preserve-3d; transition: transform .38s cubic-bezier(.2,.8,.2,1); }
       .bag-handle { position: absolute; z-index: 0; top: 2%; left: 22%; width: 56%; height: 42%; border: 23px solid var(--handle-color); border-bottom: 0; border-radius: 52% 52% 0 0; filter: drop-shadow(0 6px 5px rgba(4,59,34,.12)); }
       .bag-body { position: absolute; z-index: 1; inset: 24% 6% 3%; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; border: 2px solid rgba(0,0,0,.08); border-radius: 4px 4px 11px 11px; background-color: var(--bag-color); box-shadow: inset 12px 0 0 rgba(255,255,255,.12), inset -12px 0 0 rgba(0,0,0,.075), 0 20px 24px rgba(4,59,34,.18); }
@@ -282,6 +289,7 @@
       .studio-range-wrap { display: grid; grid-template-columns: 1fr auto; gap: 9px; align-items: center; }
       .studio-range { width: 100%; accent-color: var(--green); cursor: pointer; }
       .studio-angle { min-width: 50px; padding: 5px 7px; border-radius: 8px; background: var(--wash); color: var(--green); font-size: .73rem; font-weight: 900; text-align: center; }
+      .studio-view-note { margin: 8px 0 0; color: var(--muted); font-size: .7rem; line-height: 1.4; }
       .studio-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
       .studio-actions .button { border: 0; cursor: pointer; }
       .button-studio-reset { border: 1px solid #cbdacb !important; background: white; color: var(--green-deep); }
@@ -733,8 +741,16 @@
               </div>
 
               <div class="studio-step">
-                <p class="studio-step-title">5. Shape the 3D view</p>
+                <p class="studio-step-title">5. Choose the preview</p>
                 <div class="studio-two-up">
+                  <div>
+                    <label class="studio-label" for="studio-preview-mode">View</label>
+                    <select class="studio-select" id="studio-preview-mode">
+                      <option value="real">Actual bag photo</option>
+                      <option value="spin">360° concept spin</option>
+                      <option value="concept">Custom-colour concept</option>
+                    </select>
+                  </div>
                   <div>
                     <label class="studio-label" for="studio-layout">Print placement</label>
                     <select class="studio-select" id="studio-layout">
@@ -746,6 +762,7 @@
                   <div>
                     <label class="studio-label" for="studio-view">Rotate bag</label>
                     <div class="studio-range-wrap"><input class="studio-range" id="studio-view" type="range" min="-22" max="22" value="-7" step="1"><output class="studio-angle" id="studio-angle" for="studio-view">−7°</output></div>
+                    <p class="studio-view-note">The spin is illustrative; use real product photos as the reference.</p>
                   </div>
                 </div>
               </div>
@@ -764,7 +781,8 @@
 
             <div class="studio-preview-panel">
               <div class="studio-preview-top"><strong>Your live concept</strong><span class="preview-badge">Preview only</span></div>
-              <div class="studio-canvas">
+              <div class="studio-canvas preview-real" id="studio-canvas">
+                <div class="product-reference" id="studio-product-reference"><img id="studio-product-photo" src="assets/loop-handle-bag-photo.png" alt="ECO-FAB loop-handle bag product reference"></div>
                 <div class="bag-stage bag-loop pattern-plain" id="bag-stage" style="--bag-color:#f7f7f2; --handle-color:#075431;">
                   <span class="bag-handle" aria-hidden="true"></span>
                   <div class="bag-body">
@@ -943,6 +961,9 @@
         const layoutInput = document.querySelector('#studio-layout');
         const viewInput = document.querySelector('#studio-view');
         const angleOutput = document.querySelector('#studio-angle');
+        const previewModeInput = document.querySelector('#studio-preview-mode');
+        const studioCanvas = document.querySelector('#studio-canvas');
+        const productPhoto = document.querySelector('#studio-product-photo');
         const photoInput = document.querySelector('#studio-photo');
         const photoPreview = document.querySelector('#studio-photo-preview');
         const brandPreview = document.querySelector('#studio-brand-preview');
@@ -958,6 +979,15 @@
           mono: '"Courier New", Courier, monospace',
           condensed: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif'
         };
+        const productReferences = {
+          loop: { source: 'assets/loop-handle-bag-photo.png', alt: 'ECO-FAB loop-handle bag product reference' },
+          dcut: { source: 'assets/d-cut-bag-photo.png', alt: 'ECO-FAB D-cut bag product reference' },
+          wcut: { source: 'assets/w-cut-bag-photo.png', alt: 'ECO-FAB W-cut bag product reference' },
+          box: { source: 'assets/box-bag-photo.png', alt: 'ECO-FAB box bag product reference' },
+          bottom: { source: 'assets/bottom-gusset-bag-photo.png', alt: 'ECO-FAB bottom gusset bag product reference' },
+          cake: { source: 'assets/cake-box-bag-photo.png', alt: 'ECO-FAB cake box bag product reference' },
+          shoe: { source: 'assets/shoe-bag-photo.png', alt: 'ECO-FAB shoe bag product reference' }
+        };
         let photoUrl = '';
 
         const activeSwatch = (selector) => document.querySelector(`${selector}[aria-pressed="true"]`);
@@ -966,14 +996,19 @@
           const base = activeSwatch('.base-swatch');
           const handle = activeSwatch('.handle-swatch');
           const brand = brandTextInput.value.trim() || 'YOUR BRAND';
+          const reference = productReferences[bagTypeInput.value];
           bagStage.className = `bag-stage bag-${bagTypeInput.value} pattern-${patternInput.value} layout-${layoutInput.value}${photoPreview.getAttribute('src') ? ' has-photo' : ''}`;
+          studioCanvas.className = `studio-canvas preview-${previewModeInput.value}`;
           bagStage.style.setProperty('--bag-color', base.dataset.colour);
           bagStage.style.setProperty('--handle-color', handle.dataset.colour);
           bagStage.style.setProperty('--turn', `${viewInput.value}deg`);
+          studioCanvas.style.setProperty('--photo-turn', `${viewInput.value}deg`);
+          productPhoto.src = reference.source;
+          productPhoto.alt = reference.alt;
           angleOutput.value = `${viewInput.value > 0 ? '+' : viewInput.value < 0 ? '−' : ''}${Math.abs(viewInput.value)}°`;
           brandPreview.textContent = brand;
           brandPreview.style.fontFamily = fontFamilies[fontInput.value];
-          summaryText.textContent = `${optionText(bagTypeInput)} · ${base.dataset.name} bag · ${handle.dataset.name} handles · ${optionText(patternInput)} · ${optionText(layoutInput)} · ${optionText(fontInput)}`;
+          summaryText.textContent = `${optionText(previewModeInput)} · ${optionText(bagTypeInput)} · ${base.dataset.name} bag · ${handle.dataset.name} handles · ${optionText(patternInput)} · ${optionText(layoutInput)} · ${optionText(fontInput)}`;
         };
 
         document.querySelectorAll('.base-swatch, .handle-swatch').forEach((swatch) => {
@@ -985,8 +1020,8 @@
           });
         });
 
-        [bagTypeInput, patternInput, brandTextInput, fontInput, layoutInput, viewInput].forEach((input) => input.addEventListener('input', updateStudio));
-        [bagTypeInput, patternInput, fontInput, layoutInput].forEach((input) => input.addEventListener('change', updateStudio));
+        [bagTypeInput, patternInput, brandTextInput, fontInput, layoutInput, viewInput, previewModeInput].forEach((input) => input.addEventListener('input', updateStudio));
+        [bagTypeInput, patternInput, fontInput, layoutInput, previewModeInput].forEach((input) => input.addEventListener('change', updateStudio));
 
         photoInput.addEventListener('change', () => {
           const [file] = photoInput.files;
@@ -1022,6 +1057,7 @@
             'Hello ECO-FAB ENTERPRISE, I created a bag design preview.',
             '',
             `Bag type: ${optionText(bagTypeInput)}`,
+            `Preview selected: ${optionText(previewModeInput)}`,
             `Bag colour: ${base.dataset.name}`,
             `Handle colour: ${handle.dataset.name}`,
             `Pattern: ${optionText(patternInput)}`,

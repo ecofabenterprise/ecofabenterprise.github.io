@@ -382,6 +382,7 @@
       .footer-bottom { display: flex; justify-content: space-between; gap: 18px; padding: 18px 0 23px; border-top: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.58); font-size: .75rem; }
       .floating-whatsapp { position: fixed; z-index: 25; right: 21px; bottom: 21px; display: inline-flex; align-items: center; gap: 10px; min-height: 51px; padding: 0 17px; border-radius: 999px; color: white; background: #0a9a42; box-shadow: 0 14px 30px rgba(4,59,34,.28); font-size: .88rem; font-weight: 900; }
       .floating-whatsapp::before { content: "✦"; display: grid; place-items: center; width: 23px; height: 23px; border-radius: 50%; background: white; color: #0a9a42; font-size: .7rem; }
+      .mobile-contact-bar { display: none; }
 
       @media (max-width: 1020px) {
         .desktop-nav { display: none; }
@@ -416,6 +417,7 @@
       }
 
       @media (max-width: 690px) {
+        body { padding-bottom: 86px; }
         .shell { width: min(100% - 30px, 1180px); }
         .topbar .shell { flex-direction: column; justify-content: center; gap: 3px; text-align: center; font-size: .58rem; }
         .topbar-gstin { margin-left: 0; font-size: .64rem; }
@@ -427,6 +429,11 @@
         .header-actions { display: none; }
         .header-actions .button { min-height: 37px; padding-inline: 12px; border-radius: 9px; font-size: .78rem; }
         .mobile-nav-actions .button { min-height: 44px; font-size: .84rem; }
+        .mobile-contact-bar { position: fixed; z-index: 60; right: 10px; bottom: 10px; left: 10px; display: grid; grid-template-columns: .92fr 1.18fr; gap: 8px; padding: 8px; border: 1px solid rgba(255,255,255,.48); border-radius: 16px; background: rgba(255,255,255,.94); box-shadow: 0 13px 33px rgba(4,59,34,.25); backdrop-filter: blur(12px); }
+        .mobile-contact-bar a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 11px; color: white; font-size: .84rem; font-weight: 950; text-decoration: none; }
+        .mobile-contact-bar .mobile-call { background: #e5162f; }
+        .mobile-contact-bar .mobile-whatsapp { background: #0a9a42; }
+        .floating-whatsapp { display: none; }
         .hero { min-height: 640px; }
         .hero-grid { min-height: 640px; }
         .hero-content { padding: 57px 0 58px; }
@@ -562,31 +569,31 @@
           </div>
           <div class="product-grid">
             <article class="product-card">
-              <div class="product-image"><img src="assets/d-cut-bag-photo.png" alt="Colourful red, white and blue nonwoven D-cut bags with integrated hand grips and custom logo printing" /><span class="shape-badge">D</span></div>
+              <div class="product-image"><img src="assets/d-cut-bag-photo.png" loading="lazy" decoding="async" alt="Colourful red, white and blue nonwoven D-cut bags with integrated hand grips and custom logo printing" /><span class="shape-badge">D</span></div>
               <div class="product-info"><h3>D-cut bags</h3><p>An integrated die-cut grip makes this a practical choice for counters, promotions and everyday packaging.</p><a class="product-link" href="#quote">Enquire about D-cut bags</a></div>
             </article>
             <article class="product-card">
-              <div class="product-image"><img src="assets/w-cut-bag-photo.png" alt="Colourful nonwoven W-cut bags with wide integrated hand grips and custom logo printing" /><span class="shape-badge">W</span></div>
+              <div class="product-image"><img src="assets/w-cut-bag-photo.png" loading="lazy" decoding="async" alt="Colourful nonwoven W-cut bags with wide integrated hand grips and custom logo printing" /><span class="shape-badge">W</span></div>
               <div class="product-info"><h3>W-cut bags</h3><p>A wide W-cut grip and gusseted base give this lighter bag an easy hold and extra room for larger purchases.</p><a class="product-link" href="#quote">Enquire about W-cut bags</a></div>
             </article>
             <article class="product-card">
-              <div class="product-image"><img src="assets/loop-handle-bag-photo.png" alt="White floral-printed nonwoven loop-handle bag with red handles being held against a yellow background" /><span class="shape-badge">L</span></div>
+              <div class="product-image"><img src="assets/loop-handle-bag-photo.png" loading="lazy" decoding="async" alt="White floral-printed nonwoven loop-handle bag with red handles being held against a yellow background" /><span class="shape-badge">L</span></div>
               <div class="product-info"><h3>Loop-handle bags</h3><p>Sewn loop handles give boutiques, events and branded retail packs a more polished carry.</p><a class="product-link" href="#quote">Enquire about loop-handle bags</a></div>
             </article>
             <article class="product-card">
-              <div class="product-image"><img src="assets/box-bag-photo.png" alt="Yellow autumn leaf-printed nonwoven box bag with red sewn loop handles and side gussets" /><span class="shape-badge">B</span></div>
+              <div class="product-image"><img src="assets/box-bag-photo.png" loading="lazy" decoding="async" alt="Yellow autumn leaf-printed nonwoven box bag with red sewn loop handles and side gussets" /><span class="shape-badge">B</span></div>
               <div class="product-info"><h3>Box bags</h3><p>A firm squared base and tall side gussets keep larger packs upright, stable and presentable.</p><a class="product-link" href="#quote">Enquire about box bags</a></div>
             </article>
             <article class="product-card">
-              <div class="product-image"><img src="assets/bottom-gusset-bag-photo.png" alt="Blue nonwoven bottom gusset bag with black sewn handles and gold custom logo printing" /><span class="shape-badge">G</span></div>
+              <div class="product-image"><img src="assets/bottom-gusset-bag-photo.png" loading="lazy" decoding="async" alt="Blue nonwoven bottom gusset bag with black sewn handles and gold custom logo printing" /><span class="shape-badge">G</span></div>
               <div class="product-info"><h3>Bottom gusset bags</h3><p>A reinforced flat base adds depth and stability for groceries, garments and heavier retail packs.</p><a class="product-link" href="#quote">Enquire about bottom gusset bags</a></div>
             </article>
             <article class="product-card">
-              <div class="product-image"><img src="assets/shoe-bag-photo.png" alt="Cream drawstring nonwoven shoe bag with navy and gold custom logo print beside formal shoes" /><span class="shape-badge">S</span></div>
+              <div class="product-image"><img src="assets/shoe-bag-photo.png" loading="lazy" decoding="async" alt="Cream drawstring nonwoven shoe bag with navy and gold custom logo print beside formal shoes" /><span class="shape-badge">S</span></div>
               <div class="product-info"><h3>Shoe bags</h3><p>A compact drawstring format for footwear, accessories, travel kits and branded presentation packs.</p><a class="product-link" href="#quote">Enquire about shoe bags</a></div>
             </article>
             <article class="product-card">
-              <div class="product-image"><img src="assets/cake-box-bag-photo.png" alt="Red nonwoven cake box bag with sturdy red loop handles, a box-gusseted base and gold cake-themed custom printing" /><span class="shape-badge">C</span></div>
+              <div class="product-image"><img src="assets/cake-box-bag-photo.png" loading="lazy" decoding="async" alt="Red nonwoven cake box bag with sturdy red loop handles, a box-gusseted base and gold cake-themed custom printing" /><span class="shape-badge">C</span></div>
               <div class="product-info"><h3>Cake box bags</h3><p>A sturdy, box-gusseted carry bag designed to protect cake boxes, bakery gifts and premium food packs.</p><a class="product-link" href="#quote">Enquire about cake box bags</a></div>
             </article>
           </div>
@@ -825,7 +832,7 @@
             <a class="button button-quote" href="#quote">Start a printing enquiry</a>
           </div>
           <div class="printing-visual">
-            <img src="assets/printing-production.png" alt="Nonwoven bag custom-printing production process" />
+            <img src="assets/printing-production.png" loading="lazy" decoding="async" alt="Nonwoven bag custom-printing production process" />
             <div class="print-flag"><small>Custom print options</small>Build your brand into every carry.</div>
           </div>
         </div>
@@ -864,7 +871,7 @@
             </div>
           </div>
           <div class="about-visual">
-            <img src="assets/eco-fab-bag-collection.png" alt="A colourful collection of premium nonwoven loop-handle bags" />
+            <img src="assets/eco-fab-bag-collection.png" loading="lazy" decoding="async" alt="A colourful collection of premium nonwoven loop-handle bags" />
             <div class="about-quote">Practical bags, designed to carry your products and your brand.<span>Where every bag carries your brand.</span></div>
           </div>
         </div>
@@ -874,13 +881,13 @@
         <div class="shell">
           <div class="gallery-top"><div><p class="kicker">Our work</p><h2 id="gallery-title">A closer look at bag and print details.</h2></div><a class="button button-inset" href="#quote">Discuss your requirements</a></div>
           <div class="gallery-grid">
-            <div class="gallery-card"><img src="assets/d-cut-bag-photo.png" alt="Colourful custom-printed nonwoven D-cut bags with integrated hand grips" /></div>
-            <div class="gallery-card"><img src="assets/w-cut-bag-photo.png" alt="Colourful custom-printed nonwoven W-cut bags with integrated handles" /></div>
-            <div class="gallery-card"><img src="assets/loop-handle-bag-photo.png" alt="Custom-printed nonwoven loop-handle bag with red sewn handles" /></div>
-            <div class="gallery-card"><img src="assets/box-bag-photo.png" alt="Custom-printed nonwoven box bag with a structured gusseted base" /></div>
-            <div class="gallery-card"><img src="assets/bottom-gusset-bag-photo.png" alt="Blue custom-printed nonwoven bottom gusset bag with a stable flat base" /></div>
-            <div class="gallery-card"><img src="assets/shoe-bag-photo.png" alt="Cream custom-printed nonwoven drawstring shoe bag for footwear packaging" /></div>
-            <div class="gallery-card"><img src="assets/cake-box-bag-photo.png" alt="Red custom-printed nonwoven cake box bag with sturdy loop handles" /></div>
+            <div class="gallery-card"><img src="assets/d-cut-bag-photo.png" loading="lazy" decoding="async" alt="Colourful custom-printed nonwoven D-cut bags with integrated hand grips" /></div>
+            <div class="gallery-card"><img src="assets/w-cut-bag-photo.png" loading="lazy" decoding="async" alt="Colourful custom-printed nonwoven W-cut bags with integrated handles" /></div>
+            <div class="gallery-card"><img src="assets/loop-handle-bag-photo.png" loading="lazy" decoding="async" alt="Custom-printed nonwoven loop-handle bag with red sewn handles" /></div>
+            <div class="gallery-card"><img src="assets/box-bag-photo.png" loading="lazy" decoding="async" alt="Custom-printed nonwoven box bag with a structured gusseted base" /></div>
+            <div class="gallery-card"><img src="assets/bottom-gusset-bag-photo.png" loading="lazy" decoding="async" alt="Blue custom-printed nonwoven bottom gusset bag with a stable flat base" /></div>
+            <div class="gallery-card"><img src="assets/shoe-bag-photo.png" loading="lazy" decoding="async" alt="Cream custom-printed nonwoven drawstring shoe bag for footwear packaging" /></div>
+            <div class="gallery-card"><img src="assets/cake-box-bag-photo.png" loading="lazy" decoding="async" alt="Red custom-printed nonwoven cake box bag with sturdy loop handles" /></div>
           </div>
         </div>
       </section>
@@ -943,12 +950,37 @@
     </footer>
 
     <a class="floating-whatsapp" href="https://wa.me/917980484921?text=Hello%20ECO-FAB%20ENTERPRISE%2C%20I%20would%20like%20to%20enquire%20about%20nonwoven%20bags." target="_blank" rel="noopener">WhatsApp us</a>
+    <div class="mobile-contact-bar" aria-label="Quick contact options">
+      <a class="mobile-call" href="tel:+917980484921">Call now</a>
+      <a class="mobile-whatsapp" href="https://wa.me/917980484921?text=Hello%20ECO-FAB%20ENTERPRISE%2C%20I%20would%20like%20to%20enquire%20about%20nonwoven%20bags." target="_blank" rel="noopener">WhatsApp us</a>
+    </div>
 
     <script>
       const menuButton = document.querySelector('.menu-toggle');
       const mobileNav = document.querySelector('.mobile-nav');
       const quoteForm = document.querySelector('#quote-form');
       const whatsappNumber = '917980484921';
+      // Add your GA4 Measurement ID here when available, for example: G-XXXXXXXXXX.
+      // Interaction events intentionally exclude names, phone numbers and other form details.
+      const gaMeasurementId = '';
+      if (gaMeasurementId) {
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
+        document.head.appendChild(gaScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', gaMeasurementId);
+      }
+      const trackEvent = (eventName, parameters = {}) => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: eventName, ...parameters });
+        if (typeof window.gtag === 'function') window.gtag('event', eventName, parameters);
+      };
+      document.querySelectorAll('a[href^="tel:"]').forEach((link) => link.addEventListener('click', () => trackEvent('call_click')));
+      document.querySelectorAll('a[href*="wa.me/"]').forEach((link) => link.addEventListener('click', () => trackEvent('whatsapp_click')));
+      document.querySelectorAll('a[href="#quote"]').forEach((link) => link.addEventListener('click', () => trackEvent('quote_section_open')));
 
       const designStudio = document.querySelector('#design-studio-form');
       if (designStudio) {
@@ -1080,6 +1112,7 @@
             '',
             'Please confirm final size, GSM, print colours and artwork before printing.'
           ].join('\n');
+          trackEvent('design_brief_whatsapp', { bag_type: bagTypeInput.value, quantity_entered: Boolean(quantityInput.value) });
           window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
         });
 
@@ -1118,6 +1151,7 @@
           'Delivery location: ' + data.get('deliveryLocation'),
           'Other requirements: ' + (data.get('details') || 'Not provided')
         ].join('\n');
+        trackEvent('quote_submit', { bag_type: data.get('bagType') || 'not_selected', quantity_entered: Boolean(data.get('quantity')) });
         window.open('https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
       });
     </script>

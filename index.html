@@ -741,14 +741,14 @@
               </div>
 
               <div class="studio-step">
-                <p class="studio-step-title">5. Choose the preview</p>
+                <p class="studio-step-title">5. View your result</p>
                 <div class="studio-two-up">
                   <div>
-                    <label class="studio-label" for="studio-preview-mode">View</label>
+                    <label class="studio-label" for="studio-preview-mode">Preview mode</label>
                     <select class="studio-select" id="studio-preview-mode">
-                      <option value="real">Actual bag photo</option>
+                      <option value="concept" selected>Editable bag design</option>
+                      <option value="real">Original product photo</option>
                       <option value="spin">360° concept spin</option>
-                      <option value="concept">Custom-colour concept</option>
                     </select>
                   </div>
                   <div>
@@ -762,7 +762,7 @@
                   <div>
                     <label class="studio-label" for="studio-view">Rotate bag</label>
                     <div class="studio-range-wrap"><input class="studio-range" id="studio-view" type="range" min="-22" max="22" value="-7" step="1"><output class="studio-angle" id="studio-angle" for="studio-view">−7°</output></div>
-                    <p class="studio-view-note">The spin is illustrative; use real product photos as the reference.</p>
+                  <p class="studio-view-note">Your colour, pattern, handle, logo and font edits appear in Editable bag design. Original product photo keeps your supplied bag image unchanged.</p>
                   </div>
                 </div>
               </div>
@@ -780,8 +780,8 @@
             </form>
 
             <div class="studio-preview-panel">
-              <div class="studio-preview-top"><strong>Your live concept</strong><span class="preview-badge">Preview only</span></div>
-              <div class="studio-canvas preview-real" id="studio-canvas">
+              <div class="studio-preview-top"><strong>Your bag preview</strong><span class="preview-badge">Preview only</span></div>
+              <div class="studio-canvas preview-concept" id="studio-canvas">
                 <div class="product-reference" id="studio-product-reference"><img id="studio-product-photo" src="assets/loop-handle-bag-photo.png" alt="ECO-FAB loop-handle bag product reference"></div>
                 <div class="bag-stage bag-loop pattern-plain" id="bag-stage" style="--bag-color:#f7f7f2; --handle-color:#075431;">
                   <span class="bag-handle" aria-hidden="true"></span>
@@ -1011,31 +1011,41 @@
           summaryText.textContent = `${optionText(previewModeInput)} · ${optionText(bagTypeInput)} · ${base.dataset.name} bag · ${handle.dataset.name} handles · ${optionText(patternInput)} · ${optionText(layoutInput)} · ${optionText(fontInput)}`;
         };
 
+        const showEditableDesign = () => {
+          if (previewModeInput.value !== 'concept') {
+            previewModeInput.value = 'concept';
+            statusText.textContent = 'Editable bag design is active so your colour, pattern, handle, logo and font changes are visible.';
+          }
+          updateStudio();
+        };
+
         document.querySelectorAll('.base-swatch, .handle-swatch').forEach((swatch) => {
           swatch.addEventListener('click', () => {
             const group = swatch.classList.contains('base-swatch') ? '.base-swatch' : '.handle-swatch';
             document.querySelectorAll(group).forEach((button) => button.setAttribute('aria-pressed', 'false'));
             swatch.setAttribute('aria-pressed', 'true');
-            updateStudio();
+            showEditableDesign();
           });
         });
 
-        [bagTypeInput, patternInput, brandTextInput, fontInput, layoutInput, viewInput, previewModeInput].forEach((input) => input.addEventListener('input', updateStudio));
-        [bagTypeInput, patternInput, fontInput, layoutInput, previewModeInput].forEach((input) => input.addEventListener('change', updateStudio));
+        [bagTypeInput, previewModeInput].forEach((input) => input.addEventListener('input', updateStudio));
+        [bagTypeInput, previewModeInput].forEach((input) => input.addEventListener('change', updateStudio));
+        [patternInput, brandTextInput, fontInput, layoutInput, viewInput].forEach((input) => input.addEventListener('input', showEditableDesign));
+        [patternInput, fontInput, layoutInput].forEach((input) => input.addEventListener('change', showEditableDesign));
 
         photoInput.addEventListener('change', () => {
           const [file] = photoInput.files;
           if (!file) {
             photoPreview.removeAttribute('src');
             statusText.textContent = 'Your image stays on this device for the preview. Attach the original file in WhatsApp when you send the enquiry.';
-            updateStudio();
+            showEditableDesign();
             return;
           }
           if (photoUrl) URL.revokeObjectURL(photoUrl);
           photoUrl = URL.createObjectURL(file);
           photoPreview.src = photoUrl;
           statusText.textContent = `${file.name} is shown on the preview. Attach the original file in WhatsApp when you send the enquiry.`;
-          updateStudio();
+          showEditableDesign();
         });
 
         document.querySelector('#studio-reset').addEventListener('click', () => {
